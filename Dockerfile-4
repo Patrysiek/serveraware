@@ -1,0 +1,5 @@
+FROM bellsoft/liberica-runtime-container:jre-21-cds-slim-glibc
+WORKDIR /app
+ARG JAR_FILE=build/libs/*.jar
+COPY ${JAR_FILE} application.jar
+ENTRYPOINT ["java", "-jar", "application.jar"]

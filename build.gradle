@@ -47,3 +47,15 @@ tasks.named("jar") {
 tasks.named("bootJar") {
 	mainClass = "$appMainClass"
 }
+
+tasks.named("bootBuildImage") {
+	imageName = 'bael-6094:latest'
+}
+
+//bootBuildImage {
+//	imageName = "done-by-gradle"
+//	docker {
+//		host = "tcp://localhost:2375"
+//		tlsVerify = false
+//	}
+//}
